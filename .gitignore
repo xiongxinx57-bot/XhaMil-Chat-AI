@@ -1,0 +1,75 @@
+# —— 本地配置 / 密钥（勿提交）——
+json/config.json
+json/chat.db
+json/chat.db-*
+json/chat.db-shm
+json/chat.db-wal
+scripts/deploy.config.json
+admin-art/.env
+admin-art/.env.*
+!admin-art/.env.example
+!admin-art/.env.*.example
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# —— 依赖 ——
+node_modules/
+**/node_modules/
+
+# —— 构建产物 ——
+dist/
+dist-ssr/
+*.local
+
+# —— 运行时会话 / 日志 ——
+backend/data/sessions.json
+backend/data/user-sessions.json
+backend/*.log
+backend/*.log.*
+*.log
+*.log.err
+
+# —— 用户上传 / 安装包 / 语音模型（体积大且含隐私）——
+media/Chat Images/**
+!media/Chat Images/.gitkeep
+media/Chat Videos/**
+!media/Chat Videos/.gitkeep
+media/Group Files/**
+!media/Group Files/.gitkeep
+media/Moments/**
+!media/Moments/.gitkeep
+media/Moments Videos/**
+!media/Moments Videos/.gitkeep
+media/Reports/**
+!media/Reports/.gitkeep
+media/App Releases/**
+!media/App Releases/.gitkeep
+media/Tts/**
+!media/Tts/.gitkeep
+media/vosk/**
+!media/vosk/README.txt
+media/avatar/**
+!media/avatar/default.png
+!media/avatar/.gitkeep
+
+# —— 大体积可选资源（勿推公开仓）——
+白-免费版/
+**/白-免费版/
+
+# —— 本机临时目录 ——
+暂时*/
+**/暂时*/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+!.vscode/extensions.json
+
+# nested git backups
+**/.git.bak-nested/
+admin-art/.git.bak-nested/
+
