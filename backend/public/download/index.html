@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>XhaMil · 下载</title>
+  <link rel="icon" href="./icon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="./icon-round.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="mesh" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="orb orb-1" data-parallax="0.04" aria-hidden="true"></div>
+  <div class="orb orb-2" data-parallax="0.07" aria-hidden="true"></div>
+  <div class="orb orb-3" data-parallax="0.03" aria-hidden="true"></div>
+  <canvas id="trailCanvas" class="trail-canvas" aria-hidden="true"></canvas>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <section class="hero-screen">
+    <header class="nav rise" style="--i:0">
+      <div class="brand">
+        <img class="brand-icon" id="brandIcon" src="./icon.png" width="48" height="48" alt="XhaMil" />
+        <div>
+          <p class="brand-name" id="brandName">XhaMil</p>
+          <p class="brand-tag" id="brandTag">聊聊 · 更轻松</p>
+        </div>
+      </div>
+      <span class="nav-pill">Android</span>
+    </header>
+
+    <div class="hero-center">
+      <div class="chip-row rise" style="--i:1">
+        <span class="chip">私聊</span>
+        <span class="chip">群聊</span>
+        <span class="chip">语音房</span>
+        <span class="chip">说说</span>
+        <span class="chip">自定义人设</span>
+      </div>
+
+      <h1 class="title rise" style="--i:2" id="headline">下载 XhaMil</h1>
+      <p class="lead rise" style="--i:3" id="subline">年轻人的聊天方式，装上就能用</p>
+
+      <div class="cta rise" style="--i:4">
+        <a class="btn" id="downloadBtn" href="#" aria-disabled="true">
+          <span class="btn-label" id="btnLabel">加载中…</span>
+          <span class="btn-meta" id="btnMeta"></span>
+        </a>
+        <p class="hint" id="hint">仅支持 Android · 安装时请允许「未知来源」</p>
+      </div>
+    </div>
+
+    <a class="scroll-hint rise" style="--i:5" href="#preview">
+      <span class="scroll-line"></span>
+      <span>下滑预览</span>
+    </a>
+  </section>
+
+  <section class="preview-screen" id="preview">
+    <div class="shell">
+      <div class="section-head reveal">
+        <p class="section-kicker">Product Preview</p>
+        <h2>看看它长什么样</h2>
+        <p>自定义人设 · 简约交互 · 清爽界面</p>
+      </div>
+
+      <div class="promo-grid">
+        <figure class="promo-card reveal" style="--i:0" data-tilt data-lightbox="./promo/1-ai-chat.png" data-caption="自定义人设 · 聊天不枯燥">
+          <div class="promo-frame">
+            <img src="./promo/1-ai-chat.png" alt="自定义人设 AI 陪聊" loading="lazy" />
+          </div>
+          <figcaption>
+            <strong>自定义人设</strong>
+            <span>聊天不枯燥</span>
+          </figcaption>
+        </figure>
+        <figure class="promo-card reveal" style="--i:1" data-tilt data-lightbox="./promo/5-chat-home.png" data-caption="聊天首页 · 简洁美观">
+          <div class="promo-frame">
+            <img src="./promo/5-chat-home.png" alt="聊天首页" loading="lazy" />
+          </div>
+          <figcaption>
+            <strong>聊天首页</strong>
+            <span>简洁美观</span>
+          </figcaption>
+        </figure>
+        <figure class="promo-card reveal" style="--i:2" data-tilt data-lightbox="./promo/6-dm.png" data-caption="私聊体验 · 沟通愉悦">
+          <div class="promo-frame">
+            <img src="./promo/6-dm.png" alt="私聊界面" loading="lazy" />
+          </div>
+          <figcaption>
+            <strong>私聊体验</strong>
+            <span>沟通愉悦</span>
+          </figcaption>
+        </figure>
+        <figure class="promo-card reveal" style="--i:3" data-tilt data-lightbox="./promo/4-moments.png" data-caption="说说动态 · 沉浸阅读">
+          <div class="promo-frame">
+            <img src="./promo/4-moments.png" alt="说说动态" loading="lazy" />
+          </div>
+          <figcaption>
+            <strong>说说动态</strong>
+            <span>沉浸阅读</span>
+          </figcaption>
+        </figure>
+        <figure class="promo-card reveal" style="--i:4" data-tilt data-lightbox="./promo/3-contacts.png" data-caption="通讯录 · 查找高效">
+          <div class="promo-frame">
+            <img src="./promo/3-contacts.png" alt="通讯录" loading="lazy" />
+          </div>
+          <figcaption>
+            <strong>通讯录</strong>
+            <span>查找高效</span>
+          </figcaption>
+        </figure>
+        <figure class="promo-card reveal" style="--i:5" data-tilt data-lightbox="./promo/2-profile.png" data-caption="我的 · 交互清晰">
+          <div class="promo-frame">
+            <img src="./promo/2-profile.png" alt="我的页面" loading="lazy" />
+          </div>
+          <figcaption>
+            <strong>我的</strong>
+            <span>交互清晰</span>
+          </figcaption>
+        </figure>
+        <figure class="promo-card promo-wide reveal" style="--i:6" data-tilt data-lightbox="./promo/7-voice-room.png" data-caption="语音房 · 黑夜沉浸 · 降噪连麦">
+          <div class="promo-frame">
+            <img src="./promo/7-voice-room.png" alt="语音房" loading="lazy" />
+          </div>
+          <figcaption>
+            <strong>语音房</strong>
+            <span>黑夜沉浸 · 降噪连麦</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="howto glass reveal">
+        <h3>安装说明</h3>
+        <ol class="howto-steps">
+          <li>
+            <span class="step-num">1</span>
+            <span class="step-text">手机浏览器打开本页，点上方下载</span>
+          </li>
+          <li>
+            <span class="step-num">2</span>
+            <span class="step-text">允许安装未知应用（仅本浏览器）</span>
+          </li>
+          <li>
+            <span class="step-num">3</span>
+            <span class="step-text">装好打开，扫码或自动连接服务器</span>
+          </li>
+        </ol>
+      </div>
+
+      <footer class="foot">
+        <span id="versionLine">—</span>
+        <span class="sep">·</span>
+        <span>© <span id="year"></span> <span id="footBrand">XhaMil</span></span>
+      </footer>
+    </div>
+  </section>
+
+  <div class="dock" id="dock" aria-hidden="true">
+    <div class="dock-inner">
+      <div class="dock-info">
+        <img class="dock-icon" id="dockIcon" src="./icon.png" width="36" height="36" alt="" />
+        <div>
+          <p class="dock-title" id="dockTitle">XhaMil</p>
+          <p class="dock-meta" id="dockMeta">Android APK</p>
+        </div>
+      </div>
+      <a class="dock-btn" id="dockBtn" href="#" aria-disabled="true">下载</a>
+    </div>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="关闭">×</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" type="button" aria-label="上一张">‹</button>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" type="button" aria-label="下一张">›</button>
+    <img id="lightboxImg" alt="" />
+    <p class="lightbox-cap" id="lightboxCap"></p>
+  </div>
+
+  <div class="toast" id="toast" aria-live="polite"></div>
+
+  <script src="./config.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

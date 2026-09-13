@@ -1,0 +1,25 @@
+{
+  "name": "xhamil-chat-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js",
+    "build:admin": "npm exec --prefix ../admin-art vite build"
+  },
+  "dependencies": {
+    "app-info-parser": "^1.1.6",
+    "express": "^4.21.2",
+    "multer": "^2.2.0",
+    "mysql2": "^3.14.1",
+    "node-edge-tts": "^1.2.10",
+    "nodemailer": "^8.0.11",
+    "redis": "^4.7.1",
+    "sharp": "^0.33.5",
+    "ws": "^8.21.0"
+  },
+  "allowScripts": {
+    "sharp@0.33.5": true
+  }
+}

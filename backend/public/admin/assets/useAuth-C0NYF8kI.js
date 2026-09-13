@@ -1,0 +1,1 @@
+import{p as a,M as s,a as t,dV as u}from"./index-DTcbDuOj.js";const n=t(),o=()=>{var t,o;const r=a(),{isFrontendMode:e}=u(),{info:i}=s(n),l=null!=(o=null==(t=i.value)?void 0:t.buttons)?o:[],d=Array.isArray(r.meta.authList)?r.meta.authList:[];return{hasAuth:a=>e.value?l.includes(a):d.some(s=>(null==s?void 0:s.authMark)===a)}};export{o as u};
